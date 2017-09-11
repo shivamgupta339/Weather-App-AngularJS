@@ -1,0 +1,65 @@
+<app-navbar-before></app-navbar-before>
+<div class="container location">
+	<div class="row">
+		<div class="col col-md-12">
+			<div class="modal-content">
+				<div class="modal-header background">
+					
+					<h4>SignUp For Free !!</h4>
+				</div>
+				<div class="modal-body">
+					<form novalidate="novalidate" id="formSignUp">
+						<div id="errorSignUp">
+
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="email">Name</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+								<input class="form-control" placeholder="Name" name="emailSignUp" id="emailSignUp" type="email" [(ngModel)]="details.userName">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="email">Email</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+								<input class="form-control" placeholder="email@example.com" name="emailSignUp" id="emailSignUp" type="email" [(ngModel)]="details.emailId">
+							</div>
+						</div>
+
+						
+						
+						<div class="form-group">
+							<label class="control-label" for="phoneNumber">Phone Number</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+								<input class="form-control" placeholder="XXXXXXXXXX" name="passwordConfirmSignUp" id="passwordConfirmSignUp" type="text" [(ngModel)]="details.phoneNumber">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="password">Password</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+								<input class="form-control" placeholder="password" name="passwordSignUp" id="passwordSignUp" type="password" [(ngModel)]="details.password">
+							</div>
+						</div>
+						
+						<div class="checkbox">
+							<label>
+								<input id="term" type="checkbox">
+								I have read and accepted  <a target="_blank" href="#">the terms and conditions of use.</a>
+							</label>
+						</div>
+						
+						<button type="submit" id="btnSignUp" class="btn btn-primary" (click)=addDetails()>Create an account</button>
+					</form>
+					
+				</div>
+				<div class="modal-footer">
+					<small>Already a member? <a class="alreadySignUp" routerLink="/login">Login here</a></small>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

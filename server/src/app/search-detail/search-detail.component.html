@@ -1,0 +1,15 @@
+<app-navbar-menu></app-navbar-menu>
+<div class="col-md-12" *ngIf = "weatherdata.location" id="footer">
+  <br>
+  <h2 >Forecast for next 10 Days</h2>
+  <div class = "row responsive-sm wrap"> 
+   <div class= "col-md-3" *ngFor="let weather of weatherdata.forecast.forecastday">
+     <img src='{{weather.day.condition.icon}}'>
+     <h5>Date : {{weather.date}}</h5>
+     <h6>Max. Temperature : {{weather.day.maxtemp_c}}°C</h6>
+     <h6>Min. Temperature : {{weather.day.mintemp_c}}°C</h6>
+     <button class="btn btn-primary" (click)=saveFav(weather,weatherdata.location.name)>Add to Favourites</button>
+     <hr>
+   </div>
+ </div>
+</div>

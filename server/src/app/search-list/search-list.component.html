@@ -1,0 +1,35 @@
+<ul *ngIf = "weatherdata.location">
+  <h2>Weather of {{weatherdata.location.name}}!!</h2>
+  <img src='{{weatherdata.current.condition.icon}}'>
+  <h3>{{weatherdata.current.temp_c}}°C</h3>
+  <h5>{{weatherdata.current.condition.text}}</h5>
+  <h6>{{weatherdata.location.localtime}}</h6>
+  <h6>Humidity: {{weatherdata.current.humidity}} %</h6>
+</ul>
+<div class = "col-md-6">
+  <table *ngIf = "weatherdata.location" class="table table-striped">
+    <tr>
+    	<td>Wind Speed</td>
+    	<td>{{weatherdata.current.wind_kph}}km/hr</td>
+    </tr>
+    <tr>
+    	<td>Cloud</td>
+    	<td>{{weatherdata.current.cloud}}%</td>
+    </tr>
+    <tr>
+    	<td>Visibility</td>
+    	<td>{{weatherdata.current.vis_km}}Km/hr</td>
+    </tr>
+    <tr>
+    	<td>Real Feal(°C)</td>
+    	<td>{{weatherdata.current.feelslike_c}}°C</td>
+    </tr>
+    <tr>
+    	<td>Coordinates</td>
+    	<td>{{weatherdata.location.lat}}°,{{weatherdata.location.lon}}°</td>
+    </tr>
+  </table>
+</div>
+
+
+

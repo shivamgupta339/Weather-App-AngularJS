@@ -1,0 +1,5 @@
+<div class="container">
+<weather-search (childWeather) = "weatherData($event)"></weather-search>
+<app-search-list [weatherdata]="weather"></app-search-list>
+<app-search-detail [weatherdata]="weather"></app-search-detail>
+</div>

@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 100px">
+	<img src='{{favlist.img}}'>
+	<h5>Date : {{favlist.date}}</h5>
+	<h6>City : {{favlist.city}}</h6>
+	<h6>Min.Temp : <input [(ngModel)]="min_temp" placeholder="{{favlist.min_temp}}°C"></h6>
+	<h6>Max.Temp : <input [(ngModel)]="max_temp" placeholder="{{favlist.max_temp}}°C"></h6>
+	<h6>Humidity  : <input [(ngModel)]="humidity" placeholder="{{favlist.humidity}}%"></h6>
+	<h6>Real Feel : <input [(ngModel)]="real_feel" placeholder="{{favlist.real_feel}}°C"></h6>
+	<h6>Cloud : {{favlist.cloud}}</h6> 
+	<button class="btn btn-primary" (click)=updateFav(favlist)>Update</button>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">	
+	<app-navbar-menu></app-navbar-menu>
+	<app-update-fav *ngIf="update" [favlist]="update"></app-update-fav>
+	<div class="location">
+		<h2>Favourite Weather List!!</h2>
+		<div class = "row responsive-sm wrap"> 
+			<div class= "col-md-4" *ngFor = "let favlist of city | paginate: { itemsPerPage: 6, currentPage: p } ">
+				<img src='{{favlist.img}}'>
+				<h5>Date : {{favlist.date}}</h5>
+				<h6>City : {{favlist.city}}</h6>
+				<h6>Min. Temp : {{favlist.min_temp}}°C</h6>
+				<h6>Max. Temp : {{favlist.max_temp}}°C</h6>
+				<h6>Humidity : {{favlist.humidity}}%</h6>
+				<h6>Real Feel : {{favlist.real_feel}}°C</h6>
+				<h6>Cloud : {{favlist.cloud}}</h6>
+				<!-- <button class="btn btn-primary" (click)=saveFav(weather,weatherdata.location.name)>Update</button>-->
+				<button class="btn btn-primary" (click)=updateFav(favlist)>Update</button>
+				<button class="btn btn-danger" (click)=delFav(favlist)>Delete</button>
+				<hr>
+			</div>	
+		</div>
+		<pagination-controls (pageChange)="p = $event"></pagination-controls>
+	</div>
+</div>
+<app-footer></app-footer>
